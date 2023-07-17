@@ -35,9 +35,8 @@ class Home : Fragment() {
             product -> navigateToProductDetails(product)
         }
 
-
         recyclerView.adapter = adapter
-        productDataSource.adapter = adapter
+        productDataSource.productAdapter = adapter
 
         return rootView
     }

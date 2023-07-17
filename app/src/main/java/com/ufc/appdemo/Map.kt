@@ -17,7 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
-class Map : Fragment(), OnMapReadyCallback {
+class Map<T, U> : Fragment(), OnMapReadyCallback {
     private lateinit var mapView: MapView
     private var googleMap: GoogleMap? = null
 

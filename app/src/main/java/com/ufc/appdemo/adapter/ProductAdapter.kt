@@ -17,6 +17,7 @@ class ProductAdapter(private val context: Home, private val dataset: Datasource,
     class ProductViewHolder(itemView: View, clickAtPosition: (Int) -> Unit): RecyclerView.ViewHolder(itemView) {
         val productTitle: TextView = itemView.findViewById(R.id.product_title)
         val productPrice: TextView = itemView.findViewById(R.id.product_price)
+        val productDescription: TextView = itemView.findViewById(R.id.product_description)
 
         init {
             itemView.setOnClickListener {
@@ -36,6 +37,7 @@ class ProductAdapter(private val context: Home, private val dataset: Datasource,
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = dataset.products[position]
         holder.productTitle.text = product.name
+        holder.productDescription.text = product.description
         holder.productPrice.text = product.price
     }
 
